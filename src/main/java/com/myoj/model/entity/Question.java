@@ -1,4 +1,4 @@
-package generator.domain;
+package com.myoj.model.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
@@ -9,12 +9,12 @@ import java.util.Date;
 import lombok.Data;
 
 /**
- * 题目提交
- * @TableName question_submit
+ * 题目
+ * @TableName question
  */
-@TableName(value ="question_submit")
+@TableName(value ="question")
 @Data
-public class QuestionSubmit implements Serializable {
+public class Question implements Serializable {
     /**
      * id
      */
@@ -22,29 +22,54 @@ public class QuestionSubmit implements Serializable {
     private Long id;
 
     /**
-     * 编程语言
+     * 标题
      */
-    private String language;
+    private String title;
 
     /**
-     * 用户代码
+     * 内容
      */
-    private String code;
+    private String content;
 
     /**
-     * 判题信息（json 对象）
+     * 标签列表（json 数组）
      */
-    private String judgeInfo;
+    private String tags;
 
     /**
-     * 判题状态（0 - 待判题、1 - 判题中、2 - 成功、3 - 失败）
+     * 题目答案
      */
-    private Integer status;
+    private String answer;
 
     /**
-     * 题目 id
+     * 题目提交数
      */
-    private Long questionId;
+    private Integer submitNum;
+
+    /**
+     * 题目通过数
+     */
+    private Integer acceptedNum;
+
+    /**
+     * 判题用例（json 数组）
+     */
+    private String judgeCase;
+
+    /**
+     * 判题配置（json 对象）
+     */
+    private String judgeConfig;
+
+    /**
+     * 点赞数
+     */
+    private Integer thumbNum;
+
+    /**
+     * 收藏数
+     */
+    private Integer favourNum;
 
     /**
      * 创建用户 id

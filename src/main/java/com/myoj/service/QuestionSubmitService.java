@@ -1,6 +1,6 @@
-package generator.service;
+package com.myoj.service;
 
-import generator.domain.QuestionSubmit;
+import com.myoj.model.entity.QuestionSubmit;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**

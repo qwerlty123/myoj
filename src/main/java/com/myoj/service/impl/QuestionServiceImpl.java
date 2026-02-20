@@ -1,9 +1,9 @@
-package generator.service.impl;
+package com.myoj.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import generator.domain.Question;
-import generator.service.QuestionService;
-import generator.mapper.QuestionMapper;
+import com.myoj.model.entity.Question;
+import com.myoj.service.QuestionService;
+import com.myoj.mapper.QuestionMapper;
 import org.springframework.stereotype.Service;
 
 /**
