@@ -6,6 +6,7 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.qwerlty.myoj.common.ErrorCode;
 import com.qwerlty.myoj.constant.CommonConstant;
 import com.qwerlty.myoj.exception.BusinessException;
+import com.qwerlty.myoj.judge.JudgeService;
 import com.qwerlty.myoj.model.dto.questionsubmit.QuestionSubmitAddRequest;
 import com.qwerlty.myoj.model.dto.questionsubmit.QuestionSubmitQueryRequest;
 import com.qwerlty.myoj.model.entity.Question;
@@ -19,13 +20,16 @@ import com.qwerlty.myoj.service.QuestionSubmitService;
 import com.qwerlty.myoj.mapper.QuestionSubmitMapper;
 import com.qwerlty.myoj.service.UserService;
 import com.qwerlty.myoj.utils.SqlUtils;
+import lombok.RequiredArgsConstructor;
 import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.lang3.ObjectUtils;
 import org.apache.commons.lang3.StringUtils;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.List;
+import java.util.concurrent.CompletableFuture;
 import java.util.stream.Collectors;
 
 /**
@@ -34,6 +38,7 @@ import java.util.stream.Collectors;
 * @createDate 2026-02-20 22:25:35
 */
 @Service
+@RequiredArgsConstructor
 public class QuestionSubmitServiceImpl extends ServiceImpl<QuestionSubmitMapper, QuestionSubmit>
     implements QuestionSubmitService {
 
@@ -43,9 +48,9 @@ public class QuestionSubmitServiceImpl extends ServiceImpl<QuestionSubmitMapper,
     @Resource
     private UserService userService;
 
-//    @Resource
-//    @Lazy
-//    private JudgeService judgeService;
+    @Resource
+    @Lazy
+    private JudgeService judgeService;
 
     /**
      * 提交题目
@@ -85,9 +90,9 @@ public class QuestionSubmitServiceImpl extends ServiceImpl<QuestionSubmitMapper,
         }
         Long questionSubmitId = questionSubmit.getId();
         // 执行判题服务
-//        CompletableFuture.runAsync(() -> {
-//            judgeService.doJudge(questionSubmitId);
-//        });
+        CompletableFuture.runAsync(() -> {
+            judgeService.doJudge(questionSubmitId);
+        });
         return questionSubmitId;
     }
 
