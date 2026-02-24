@@ -1,7 +1,6 @@
 package com.qwerlty.myoj.judge.codesandbox.model;
 
 
-import com.qwerlty.myoj.model.dto.questionsubmit.JudgeInfo;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

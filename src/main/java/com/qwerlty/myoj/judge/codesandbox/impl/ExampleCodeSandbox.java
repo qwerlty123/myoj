@@ -3,7 +3,7 @@ package com.qwerlty.myoj.judge.codesandbox.impl;
 import com.qwerlty.myoj.judge.codesandbox.CodeSandbox;
 import com.qwerlty.myoj.judge.codesandbox.model.ExecuteCodeRequest;
 import com.qwerlty.myoj.judge.codesandbox.model.ExecuteCodeResponse;
-import com.qwerlty.myoj.model.dto.questionsubmit.JudgeInfo;
+import com.qwerlty.myoj.judge.codesandbox.model.JudgeInfo;
 import com.qwerlty.myoj.model.enums.JudgeInfoMessageEnum;
 import com.qwerlty.myoj.model.enums.QuestionSubmitStatusEnum;
 

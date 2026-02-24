@@ -2,7 +2,7 @@ package com.qwerlty.myoj.model.vo;
 
 import cn.hutool.json.JSONUtil;
 
-import com.qwerlty.myoj.model.dto.questionsubmit.JudgeInfo;
+import com.qwerlty.myoj.judge.codesandbox.model.JudgeInfo;
 import com.qwerlty.myoj.model.entity.QuestionSubmit;
 import lombok.Data;
 import org.springframework.beans.BeanUtils;

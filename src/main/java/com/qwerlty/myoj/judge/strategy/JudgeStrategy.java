@@ -1,6 +1,6 @@
 package com.qwerlty.myoj.judge.strategy;
 
-import com.qwerlty.myoj.model.dto.questionsubmit.JudgeInfo;
+import com.qwerlty.myoj.judge.codesandbox.model.JudgeInfo;
 
 /**
  * 判题策略

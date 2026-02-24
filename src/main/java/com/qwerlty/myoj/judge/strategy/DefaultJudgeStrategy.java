@@ -3,7 +3,7 @@ package com.qwerlty.myoj.judge.strategy;
 import cn.hutool.json.JSONUtil;
 import com.qwerlty.myoj.model.dto.question.JudgeCase;
 import com.qwerlty.myoj.model.dto.question.JudgeConfig;
-import com.qwerlty.myoj.model.dto.questionsubmit.JudgeInfo;
+import com.qwerlty.myoj.judge.codesandbox.model.JudgeInfo;
 import com.qwerlty.myoj.model.entity.Question;
 import com.qwerlty.myoj.model.enums.JudgeInfoMessageEnum;
 

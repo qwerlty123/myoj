@@ -5,7 +5,7 @@ import com.qwerlty.myoj.judge.strategy.DefaultJudgeStrategy;
 import com.qwerlty.myoj.judge.strategy.JavaLanguageJudgeStrategy;
 import com.qwerlty.myoj.judge.strategy.JudgeContext;
 import com.qwerlty.myoj.judge.strategy.JudgeStrategy;
-import com.qwerlty.myoj.model.dto.questionsubmit.JudgeInfo;
+import com.qwerlty.myoj.judge.codesandbox.model.JudgeInfo;
 import com.qwerlty.myoj.model.entity.QuestionSubmit;
 import org.springframework.stereotype.Service;
 

@@ -1,7 +1,7 @@
 package com.qwerlty.myoj.judge.strategy;
 
 import com.qwerlty.myoj.model.dto.question.JudgeCase;
-import com.qwerlty.myoj.model.dto.questionsubmit.JudgeInfo;
+import com.qwerlty.myoj.judge.codesandbox.model.JudgeInfo;
 import com.qwerlty.myoj.model.entity.Question;
 import com.qwerlty.myoj.model.entity.QuestionSubmit;
 import lombok.Data;

@@ -10,11 +10,10 @@ import com.qwerlty.myoj.judge.codesandbox.model.ExecuteCodeRequest;
 import com.qwerlty.myoj.judge.codesandbox.model.ExecuteCodeResponse;
 import com.qwerlty.myoj.judge.strategy.JudgeContext;
 import com.qwerlty.myoj.model.dto.question.JudgeCase;
-import com.qwerlty.myoj.model.dto.questionsubmit.JudgeInfo;
+import com.qwerlty.myoj.judge.codesandbox.model.JudgeInfo;
 import com.qwerlty.myoj.model.entity.Question;
 import com.qwerlty.myoj.model.entity.QuestionSubmit;
 import com.qwerlty.myoj.model.enums.QuestionSubmitStatusEnum;
-import com.qwerlty.myoj.model.vo.QuestionSubmitVO;
 import com.qwerlty.myoj.service.QuestionService;
 import com.qwerlty.myoj.service.QuestionSubmitService;
 import org.springframework.beans.factory.annotation.Value;
@@ -77,6 +76,7 @@ public class JudgeServiceImpl implements JudgeService {
                 .language(language)
                 .inputList(inputList)
                 .build();
+        //代理类执行去调用代码沙箱，得到输出结果
         ExecuteCodeResponse executeCodeResponse = codeSandbox.executeCode(executeCodeRequest);
         List<String> outputList = executeCodeResponse.getOutputList();
         // 根据沙箱的执行结果，设置题目的判题状态和信息
